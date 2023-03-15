@@ -8,8 +8,6 @@ from openpyxl import load_workbook
 import time, sys, re
 
 
-
-
 def startUp(driver):
 	driver.get("https://alocaldevelopment.com/")
 
@@ -57,7 +55,6 @@ def getInputs(driver):
 	return driver.find_elements(By.XPATH, "//input[@role='combobox']")
 
 
-
 def naicsSelect(naicsInput, inputs):
 	inputs[naicsInput].send_keys(Keys.ENTER)
 
@@ -80,7 +77,6 @@ def findCellsIndustries(driver):
 
 def findCellsDemand(driver):
 	return driver.find_elements(By.XPATH, "//mat-cell[@class='mat-cell cdk-column-surplusShortage mat-column-surplusShortage ng-tns-c14-1 ng-star-inserted']")
-
 
 
 
