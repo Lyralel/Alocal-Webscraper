@@ -119,11 +119,12 @@ for key2 in industriesNaics2.keys():
 										
 										alocal.naicsDown(7, inputs)
 											
-										wait.until(EC.presence_of_all_elements_located((By.XPATH, "//ng-dropdown-panel/div/div/div[@class='ng-option ng-star-																	 inserted ng-option-marked']" 														        + "| //ng-dropdown-panel/div/div/div[@class='ng-option ng-option-marked ng-star-inserted']")))
+										wait.until(EC.presence_of_all_elements_located((By.XPATH, "//ng-dropdown-panel/div/div/div[@class='ng-option ng-star-inserted ng-option-marked']" 
+																	+ "| //ng-dropdown-panel/div/div/div[@class='ng-option ng-option-marked ng-star-inserted']")))
 											
 									if(industryElemsNAICS6[index5].text == alocal.stripMarkedString(driver, 7, inputs)):
 										
-										industriesNaics6[industryElemsNAICS6[index5].text] = [float(demandElemsNAICS6[index5].text), 		  																						alocal.naicsNumber(driver, 7, inputs)]
+										industriesNaics6[industryElemsNAICS6[index5].text] = [float(demandElemsNAICS6[index5].text),alocal.naicsNumber(driver, 7, inputs)]
 											
 										print(industryElemsNAICS6[index5].text + ' ' + str(industriesNaics6[industryElemsNAICS6[index5].text]) + '\n')
 										break
