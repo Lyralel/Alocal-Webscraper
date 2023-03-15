@@ -39,9 +39,6 @@ inputs = alocal.getInputs(driver)
 
 #Keeps track of amount of cells used for Excel spreadsheet 
 c = 0
-
-
-
 	
 staleNessElems = alocal.findCellsIndustries(driver) 
 alocal.enterZipcode(str(zipcode), driver)
